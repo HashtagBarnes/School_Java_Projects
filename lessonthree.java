@@ -1,3 +1,10 @@
+/* Dylan G Barnes
+Lesson Three Homework: Lottery game
+CSC1060X04 Computer Science 1 
+Monday, February 5th, 2024.
+*/
+
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -21,6 +28,8 @@ public class lessonthree {
        int comp_guess_one = random.nextInt(10);
        int comp_guess_two = random.nextInt(10);
        int comp_guess_three = random.nextInt(10);
+
+       // Test inits of comp guesses.
        // int comp_guess_one = 1;
        // int comp_guess_two = 2;
        // int comp_guess_three = 3;
