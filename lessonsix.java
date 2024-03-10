@@ -28,17 +28,15 @@ public class lessonsix {
                 case 1:
                     double degrees_to_dec = option_one_conversion();
                     System.out.println(SEPARATOR);
-                    System.out.println("- Decimal Degrees: " + degrees_to_dec);
+                    System.out.println("RESULT: Decimal Degrees: " + degrees_to_dec);
                     System.out.println(SEPARATOR);
                     break;
                 case 2:
                     String dec_to_coordinates = option_two_conversion();
                     System.out.println(SEPARATOR);
-                    System.out.println("- Degrees, Minutes, Seconds, & Cardinal Direction: " + dec_to_coordinates);
+                    System.out.println("RESULT: Degrees, Minutes, Seconds, & Cardinal Direction: " + dec_to_coordinates);
                     System.out.println(SEPARATOR);
                     break;
-                default:
-                    System.out.println("- Invalid selection. Please select 1 or 2.");
             }
 
             System.out.print("- Would you like to try another (Y/y or N/n to QUIT)? ");
@@ -51,13 +49,15 @@ public class lessonsix {
 
 			if (continue_running.equalsIgnoreCase("N")) {
 			    isrunning = false;
+			    System.out.println(SEPARATOR);
 			    System.out.println("- You have opted to end the use of the GPS conversion tool. Have a nice day!");
+			    System.out.println(SEPARATOR);
 			}
-			System.out.println(SEPARATOR);
         }
     }
 
     private static void disp_menu() {
+    	System.out.println(SEPARATOR);
         System.out.println("This program converts between two GPS coordinate systems.");
         System.out.println(SEPARATOR);
         System.out.println("Please select either 1 or 2 from the menu below to choose which conversion you wish to perform.");
@@ -71,7 +71,8 @@ public class lessonsix {
     private static int grab_input() {
         int selection = KEYBOARD.nextInt();
         while (selection < 1 || selection > 2) {
-            System.out.println("- Invalid selection. Please select 1 or 2.");
+            System.out.println("** ERROR: Invalid selection. Please select 1 or 2. **");
+            System.out.print("Please select either 1 or 2 from the menu to choose which conversion you wish to perform: ");
             selection = KEYBOARD.nextInt();
         }
         return selection;
